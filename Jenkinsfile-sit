@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    tools { nodejs 'NodeJS 12' }
+
+    stages {
+
+        stage('Git checkout') {
+            ehco "checkout git"
+        }
+
+        stage('Init') {
+            steps {
+                echo "PWD"
+            }
+        }
+
+        stage('Package build') {
+            steps {
+                echo "package build"
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                echo "deploy"
+            }
+        }
+    }
+}
