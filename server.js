@@ -8,6 +8,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   console.log('feature 1');
   console.log('chore 1');
+  console.log('chore 2');
   res.end('Hello World');
 });
 
