@@ -6,7 +6,9 @@ pipeline {
     stages {
 
         stage('Git checkout') {
-            ehco "checkout git"
+            steps {
+                ehco "checkout git"
+            }
         }
 
         stage('Init') {
