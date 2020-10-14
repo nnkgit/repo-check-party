@@ -12,7 +12,9 @@ pipeline {
     stages {
 
         stage('Git checkout') {
-            ehco "checkout git"
+            steps {
+                echo "checkout git"
+            }     
         }
 
         stage('Init') {
