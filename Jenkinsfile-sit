@@ -1,14 +1,18 @@
+properties([
+    pipelineTriggers([
+        githubPush()
+    ])
+])
+
 pipeline {
     agent any
-
+    
     // tools { nodejs 'NodeJS 12' }
 
     stages {
+
         stage('Git checkout') {
-            steps {
-                echo "checkout git"
-                sh 'env'
-            }
+            ehco "checkout git"
         }
 
         stage('Init') {
