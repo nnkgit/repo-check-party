@@ -1,12 +1,15 @@
 pipeline {
     agent any
 
-    tools { nodejs 'NodeJS 12' }
+    // tools { nodejs 'NodeJS 12' }
 
     stages {
-
         stage('Git checkout') {
-            ehco "checkout git"
+            steps {
+                echo "checkout git"
+                sh 'env'
+                echo "${BRANCH_NAME}"
+            }
         }
 
         stage('Init') {
