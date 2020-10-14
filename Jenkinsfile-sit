@@ -8,7 +8,6 @@ pipeline {
             steps {
                 echo "checkout git"
                 sh 'env'
-                echo "${BRANCH_NAME}"
             }
         }
 
